@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Muoi Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Oswald:wght@200&family=Poppins&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Oswald:wght@200&family=Passions+Conflict&family=Poppins&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Oswald:wght@200&family=Passions+Conflict&family=Poppins&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+
+body {
+    background-color: whitesmoke ;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+h1{
+  font-family: 'Passions Conflict', cursive;
+  color: black;
+}
+  h2{
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+  h3,p{
+ font-family: 'Poppins', sans-serif;
+}
+  h4{
+  font-family: 'Passions Conflict', cursive;
+  color: white;
+  font-size: 300%;
+}
+.footer
+{
+  background-color: black;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: deeppink;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.text {
+color: #fff;
+position: absolute;
+top: 10px
+}
+  /*Video*/
+  /* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+  position: fixed;
+
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Uneven column - style - 70% and 30% */
+  .leftcolumn {
+    float:  left;
+    width:  70%;
+    padding: 30px;
+}
+  .rightcolumn {
+    float:  left;
+    width: 30%;
+}
+/*style for read more button */
+  #more {display: none;}
+
+/*footer*/
+  footer {
+  text-align: center;
+  padding: 2px;
+  background-color: #000000;
+  color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+/*hover button*/
+.btn {
+  border: 2px solid black;
+  background-color: black;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* pink */
+.warning {
+  border-color: black;
+  color: whitesmoke;
+}
+
+.warning:hover {
+  background: deeppink;
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+</style> 
+
+<script>
+
+  /* havascript codes for Read more button*/
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+</style>
+  </head>
+ 
+<body>
+  <!--nav bar code-->
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    
+  <h4 style="margin-left: 20px;">Muoi's blog</h4>
+       <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+          <ul class="navbar-nav">
+
+            <li class="nav-item" style="margin-left: 500px">
+              <a class="nav-link" href="Home.html" style="padding: 20px">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="project.html" style="padding: 20px"
+                >Project</a
+              >
+            </li>
+
+                        <li class="nav-item">
+              <a class="nav-link" href="blog.html" style="padding: 20px; color: deeppink"
+                >Blog</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" style="padding: 20px"
+                >Contact</a
+              >
+            </li>
+            
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search" />
+            <button class="btn" style="background-color: deeppink; color: white;" type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <video  width="100%" autoplay controls loop muted>
+        <source src="1.mp4">
+    </video>
+    <br> <br> 
+    <br> <br> 
+<div class="container">
+  <div class="row">
+  <div class="col">
+
+    <br> <br> <br> <br> 
+    <h1 style="font-size: 800%;">Muoi's Bloglife</h1>
+    <br>
+    <p>Xin chào, mình là Thủy. Chào mừng bạn đã đến blog của mình. Mình có niềm đam mê về ngành thiết kế, mình đang cố gắng từng ngày để theo đuổi nó.Chào mừng bạn đã đến blog của mình. Mình có niềm đam mê về ngành thiết kế, mình đang cố gắng từng ngày để theo đuổi nó. Để có thể mình hơn, hãy cùng mình khám phá nào. Để có thể hiểu rõ mình hơn, hãy cùng mình khám phá nào...</p>
+    <br> <br> <br> <br> 
+  </div>
+  <div class="col">
+    <img src="Asset 2.png" width="420px" height="600px">
+  </div>
+  </div>
+</div>
+<br><br><br>
+<br>
+<img src="ds.png" width="1550px" height="780px">
+<br><br>
+ 
+<div class="container">
+  <div class="button">
+
+
+<article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+     <h1 style="font-size: 900%; align-content: center;">Du lịch với mình</h1>
+    <br>
+    <p>Trong ngành du lịch, hơn một nửa số lao động làm việc trong lĩnh vực nhà hàng, tiếp đó tới khách sạn, giao thông và chỉ khoảng 9% làm việc trong lĩnh vực giải trí. Tuy vậy tỷ lệ lượng lao động và doanh thu không hoàn toàn tương ứng. </p>
+    
+     <br>
+    <img src="pexels-david-henry-5812074.jpg" width="750px" height="450px">
+      <br><br>
+      Giống như những thành phố lớn khác trên thế giới, tại Paris có thể dễ dàng tìm thấy các hiệu ăn nhanh của McDonald's, Quick hay KFC. Bên cạnh đó, những hiệu bánh mỳ kebab, các cửa hàng ăn nhanh châu Á cũng có mặt khắp mọi nơi. Tại những khu phố du lịch như Montmartre hay Quận La Tinh tập trung rất nhiều những nhà hàng trung bình. Các khách du lịch sinh viên còn có thể dùng bữa trong các căng tin thuộc hệ thống nhà ăn sinh viên của thành phố. <span id="dots">...</span><span id="more">Giống như những thành phố lớn khác trên thế giới, tại Paris có thể dễ dàng tìm thấy các hiệu ăn nhanh của McDonald's, Quick hay KFC. Bên cạnh đó, những hiệu bánh mỳ kebab, các cửa hàng ăn nhanh châu Á cũng có mặt khắp mọi nơi. Tại những khu phố du lịch như Montmartre hay Quận La Tinh tập trung rất nhiều những nhà hàng trung bình. Các khách du lịch sinh viên còn có thể dùng bữa trong các căng tin thuộc hệ thống nhà ăn sinh viên của thành phố.Giống như những thành phố lớn khác trên thế giới, tại Paris có thể dễ dàng tìm thấy các hiệu ăn nhanh của McDonald's, Quick hay KFC. Bên cạnh đó, những hiệu bánh mỳ kebab, các cửa hàng ăn nhanh châu Á cũng có mặt khắp mọi nơi. Tại những khu phố du lịch như Montmartre hay Quận La Tinh tập trung rất nhiều những nhà hàng trung bình. Các khách du lịch sinh viên còn có thể dùng bữa trong các căng tin thuộc hệ thống nhà ăn sinh viên của thành phố.Giống như những thành phố lớn khác trên thế giới, tại Paris có thể dễ dàng tìm thấy các hiệu ăn nhanh của McDonald's, Quick hay KFC. Bên cạnh đó, những hiệu bánh mỳ kebab, các cửa hàng ăn nhanh châu Á cũng có mặt khắp mọi nơi. Tại những khu phố du lịch như Montmartre hay Quận La Tinh tập trung rất nhiều những nhà hàng trung bình. Các khách du lịch sinh viên còn có thể dùng bữa trong các căng tin thuộc hệ thống nhà ăn sinh viên của thành phố.Giống như những thành phố lớn khác trên thế giới, tại Paris có thể dễ dàng tìm thấy các hiệu ăn nhanh của McDonald's, Quick hay KFC. Bên cạnh đó, những hiệu bánh mỳ kebab, các cửa hàng ăn nhanh châu Á cũng có mặt khắp mọi nơi. Tại những khu phố du lịch như Montmartre hay Quận La Tinh tập trung rất nhiều những nhà hàng trung bình. Các khách du lịch sinh viên còn có thể dùng bữa trong các căng tin thuộc hệ thống nhà ăn sinh viên của thành phố.</span></p>
+<button onclick="myFunction()" id="myBtn" class="btn warning" style="padding: 10px;">Read more</button>  
+
+
+  </div>
+</div>
+
+<br><br><br><br>
+  </div>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    <h1 style="font-size: 1000%;">Giới thiệu...</h1>
+    <br>
+
+    <p>Trong thời đại công nghệ phát triển như vũ bão, Thiết kế đồ họa (Thiết kế Mỹ thuật số) trở thành một trong những ngành nghề "hot" nhất hiện nay. Đặc biệt, đây là lựa chọn hàng đầu của những bạn trẻ có niềm đam mê mãnh liệt với kỹ xảo, đồ họa game 3D.Chính vì vậy, nếu bạn có dự định theo đuổi ngành Thiết kế đồ họa, trường Đại học FPT – sự lựa chọn hàng đầu, trường không chỉ đào tạo chú trọng về kỹ thuật đồ họa, các phần mềm, công cụ mà còn giúp các bạn sinh viên nâng cao tính thẩm mỹ, thôi thúc sự sáng tạo.</p>
+  </div>
+  <div class="col">
+    <br><br><br><br>
+
+    <p>Chương trình đào tạo chuyên ngành Thiết kế đồ họa tại Đại học FPT được xây dựng dựa trên tiêu chuẩn NASAD (National Association of Schools of Art and Design – các trường đào tạo Nghệ thuật trên thế giới và các Hiệp hội về đào tạo nghệ thuật). Đặc biệt, Đại học FPT còn đưa Computer Graphic (chuyên được sử dụng để làm phim, tạo web, làm games) vào chương trình học chính thức nhằm tạo điều kiện để sinh viên có thể tiếp cận với kỹ thuật đồ họa tiên tiến. Sau khi tốt nghiệp, sinh viên áp dụng kiến thức vào thiết kế thương hiệu, thiết kế web, di động…
+    Thiết kế đồ họa (Digital Art & Design) là ngành học kết hợp giữa nền tảng đồ họa căn bản và kỹ năng ứng dụng công nghệ thông tin. Mặc dù khá tương đồng với Thiết kế đồ họa, nhưng Mỹ thuật số lại “đa zi năng” hơn. Vì ngành này không chỉ đơn thuần là thiết kế màu sắc, bố cục, mà còn có chuyển động, kỹ xảo 3D Animation vào sản phẩm.Có thể nói FPT là môi trường lý tưởng để các bạn sinh viên chuyên ngành Thiết kế Mỹ thuật số thỏa sức sáng tạo, phát triển tài năng của mình. Điển hình là 48H MOVEMENT, Triển lãm sắp đặt ASAP, Triển lãm ASIS về phim hoạt hình 3D... đều do các bạn sinh viên đứng ra tổ chức, mỗi một tác phẩm đều thể hiện nét cá tính, độc đáo riêng.</p>
+  </div>
+  </div>
+</div>
+<br><br>
+<img src="Asset 5.png" width="100%">
+<br><br><br><br><br> 
+
+
+
+
+<div class="container">
+  <div class="row">
+  <div class="col">
+      <br><br>
+    <h1 style="font-size: 750%; color: black;">Cùng nhau đi...</h1>
+    <br>
+    <p>Xin chào, đây là sản phẩm của mình làm về website bán bánh. Chào mừng bạn đã đến portfolio của mình, hãy cùng mình khám phá nào đây là sản phẩm của mình làm về website bán bánh. Chào mừng bạn đã đến portfolio của mình, hãy cùng mình khám phá nào...</p>
+    <br><br><br><br>
+
+
+  </div>
+  <div class="col">
+    <img src="pexels-laura-tancredi-7077971.jpg" width="750px" height="500px">
+  </div>
+  </div>
+</div>
+
+
+
+   <br><br><br>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    <img src="Layer 0.png" width="750" height="500">
+  </div>
+  <div class="col">
+    <h1 style="font-size: 650%; color: black;">Vivu Châu Âu</h1>
+    <br>
+    <p>Xét rộng ra thì từ này trong tiếng Hy Lạp gồm hai từ eurys ("rộng") và ops ("mặt"), tuy nhiên giả thuyết này không rõ ràng. Một số nhà ngôn ngữ học đưa ra một giả thuyết khác dựa trên nguồn gốc dân gian là từ này có gốc từ tiếng Semit, bản thân lại mượn </p>
+ 
+    <br>
+  </div>
+</div>
+</div>
+</div>
+
+
+<br><br>
+  </div>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    <h1 style="font-size: 1000%;">Đi nào...</h1>
+    <br>
+
+    <p>Trong thời đại công nghệ phát triển như vũ bão, Thiết kế đồ họa (Thiết kế Mỹ thuật số) trở thành một trong những ngành nghề "hot" nhất hiện nay. Đặc biệt, đây là lựa chọn hàng đầu của những bạn trẻ có niềm đam mê mãnh liệt với kỹ xảo, đồ họa game 3D.Chính vì vậy, nếu bạn có dự định theo đuổi ngành Thiết kế đồ họa, trường Đại học FPT – sự lựa chọn hàng đầu, trường không chỉ đào tạo chú trọng về kỹ thuật đồ họa, các phần mềm, công cụ mà còn giúp các bạn sinh viên nâng cao tính thẩm mỹ, thôi thúc sự sáng tạo.</p>
+  </div>
+  <div class="col">
+    <br><br><br><br>
+
+    <p>Chương trình đào tạo chuyên ngành Thiết kế đồ họa tại Đại học FPT được xây dựng dựa trên tiêu chuẩn NASAD (National Association of Schools of Art and Design – các trường đào tạo Nghệ thuật trên thế giới và các Hiệp hội về đào tạo nghệ thuật). Đặc biệt, Đại học FPT còn đưa Computer Graphic (chuyên được sử dụng để làm phim, tạo web, làm games) vào chương trình học chính thức nhằm tạo điều kiện để sinh viên có thể tiếp cận với kỹ thuật đồ họa tiên tiến. Sau khi tốt nghiệp, sinh viên áp dụng kiến thức vào thiết kế thương hiệu, thiết kế web, di động…
+    Thiết kế đồ họa (Digital Art & Design) là ngành học kết hợp giữa nền tảng đồ họa căn bản và kỹ năng ứng dụng công nghệ thông tin. Mặc dù khá tương đồng với Thiết kế đồ họa, nhưng Mỹ thuật số lại “đa zi năng” hơn. Vì ngành này không chỉ đơn thuần là thiết kế màu sắc, bố cục, mà còn có chuyển động, kỹ xảo 3D Animation vào sản phẩm.Có thể nói FPT là môi trường lý tưởng để các bạn sinh viên chuyên ngành </p>
+  </div>
+  </div>
+</div>
+
+
+<img src="tr.png" width="100%">
+<br><br><br><br><br>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="col">
+    <h1 style="font-size: 1000%;">Thank you...</h1>
+    <br>
+
+    <p>Cảm ơn bạn vì đã dành thời gian vào xem portfolio của mình. Mình rất mong nhận được lời đóng góp của bạn để có thể làm tạo ra những sản phẩm tốt hơn. Nếu thấy hấp dẫn và có nhu cầu hãy liên lạc với mình nhé! Chúc bạn một ngày vui vẻ...
+  </p>
+  </div>
+  </div>
+</div>
+
+<br><br>
+    <section class="card bg-light text-white text-center">
+        <img class="card-img-top" src="tt.png" height="300px" width="100%">
+        <div class="card-img-overlay" style="position: absolute; top:0; left:0; background-color:whitesmoke; opacity: 0.7;
+        filter: alpha(opacity=100);"></div>
+        <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <h1 style="font-size: 80px; class="mb-4>Nhập email thông báo<a style="color: rgb(, 225, 0);"></a></h>
+                    </div>
+                    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                                    <input type="email" class="form-control form-control-lg"
+                                        placeholder="Enter your email...">
+                                </div>
+                                <br>
+                                <div class="col-12 col-md-3">
+                                    <button type="submit" class="btn btn-block btn-lg " style="background-color: black; color: deeppink;">Enter</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+</div>
+</div>
+ <br>
+ <br>
+ <br>
+ <br>
+<footer class="container-fluid bg-grey py-5">
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="logo-part">
+                  <p>Nguyen Thi Thuy</p>
+                  <p>UX/UI Designer in Hanoi, Vietnam</p>
+               </div>
+            </div>
+            <div class="col-md-6 px-4">
+               <h6> About Me!</h6>
+               <a href="https://www.behance.net/thynguyn163/" class="btn-footer"> Behance </a><br>
+               <a href="https://www.facebook.com/thuysuri235/" class="btn-footer"> Facebook</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 px-4">
+               </div>
+            </div>
+            <div class="col-md-6 ">
+               <form class="form-footer my-3">
+                  <input type="text"  placeholder="Find something..." name="search">
+                  <input type="button" value="Go" >
+               </form>
+               <p>Glad to meet you!</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</footer>
+
